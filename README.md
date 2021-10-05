@@ -18,3 +18,5 @@ Pytube
 Pytube.cli
 
 Time
+
+Moviepy
