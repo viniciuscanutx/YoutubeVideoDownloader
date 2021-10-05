@@ -11,7 +11,16 @@ while True:
     decis = input('Digite o que você deseja baixar:  ')
 
     if decis == '1':
-        print('Baixando video...')
+        link = input('Cole o link do video do YouTube que deseja baixar: ')
+        yt = YouTube(link, on_progress_callback=on_progress)
+        title = yt.title
+        print('Titulo =  ', title)
+        print('Baixando...')
+        video = YouTube(link)
+        yt = yt.streams.get_highest_resolution()
+        yt.download()
+        sleep(1)
+        print('Arquivo baixado.')
 
     elif decis == '2':
         print('Baixando musica...')
