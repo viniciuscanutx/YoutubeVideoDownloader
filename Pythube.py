@@ -45,6 +45,8 @@ while True:
         print('----------------------------------------------------------------------')
         print('Convertendo para mp3...')
         print('----------------------------------------------------------------------')
+        my_clip = mp.VideoFileClip(r"videotest.mov")
+        my_clip.audio.write_audiofile(r"my_result.mp3")
 
     else:
         print('Opção Incorreta')
